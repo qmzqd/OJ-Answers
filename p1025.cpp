@@ -1,30 +1,26 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int n, k, ans = 0;
-void s(int c, int t, int l)
+int n, k, ans;
+void dfs(int cnt, int rest, int s)
 {
-   if (c == k)
+   if (cnt == k)
    {
-      if (n - l >= t)
+      if (rest == 0)
       {
          ans++;
       }
       return;
    }
-   l += t;
-   int p = l;
-   for (int i = t; i <= n - p; i++)
+   for (int i=s;i*(k-cnt)<=rest;i++)
    {
-      s(c + 1, t - 1 + i, l);
-      l += 1;
+      dfs(cnt+1,rest-i,i);
    }
-   l = p - t;
-   return;
+
 }
 int main()
 {
-   cin >> n >> k;
-   s(1, 1, 0);
-   cout << ans;
+   cin>>n>>k;
+   dfs(0,n,1);
+   cout<<ans<<endl;
    return 0;
 }

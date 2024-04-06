@@ -1,12 +1,13 @@
-#include <原神.h>   
-using namespace std; 
-int a;
-int main(){  
-    cin>>a;
-    for(int i=1;i<=a;i++){
-        for(int j=3*i;j>=3*i-2;j--){
-            cout<<j<<" ";
+#include<原神.h>
+using namespace std;
+int n,a[305],top=0;
+int main(){
+    cin>>n;
+    for(int i=1;i<=3*n;i++){
+        a[++top]=1;
+        if(i%3==0){
+            for(int j=1;i<=3;j++)cout<<a;
         }
     }
-    return 0;  
+    return 0;
 }
