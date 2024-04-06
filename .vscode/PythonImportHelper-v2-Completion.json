@@ -1,0 +1,74 @@
+[
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "中南--暑假.day06.作业6",
+        "description": "中南--暑假.day06.作业6",
+        "peekOfCode": "n = int(input())  \nm = 0 \np = 0  \nfor i in range(n):\n    v=int(input())\n    if v>m:\n        m=v\n        p=i+1\nprint(p)  \nprint(m)",
+        "detail": "中南--暑假.day06.作业6",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "中南--暑假.day06.作业6",
+        "description": "中南--暑假.day06.作业6",
+        "peekOfCode": "m = 0 \np = 0  \nfor i in range(n):\n    v=int(input())\n    if v>m:\n        m=v\n        p=i+1\nprint(p)  \nprint(m)",
+        "detail": "中南--暑假.day06.作业6",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "中南--暑假.day06.作业6",
+        "description": "中南--暑假.day06.作业6",
+        "peekOfCode": "p = 0  \nfor i in range(n):\n    v=int(input())\n    if v>m:\n        m=v\n        p=i+1\nprint(p)  \nprint(m)",
+        "detail": "中南--暑假.day06.作业6",
+        "documentation": {}
+    },
+    {
+        "label": "v",
+        "kind": 5,
+        "importPath": "模拟考.road",
+        "description": "模拟考.road",
+        "peekOfCode": "v = list(map(int, input().split()))  \na = list(map(int, input().split()))  \ndp = [0] * n  \ndp[0] = 0  \nfor i in range(1, n):  \n    dp[i] = min(dp[i-1], dp[i-1] + a[i-1] * math.ceil(v[i-1] / d))  \nprint(dp[n-1])",
+        "detail": "模拟考.road",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "模拟考.road",
+        "description": "模拟考.road",
+        "peekOfCode": "a = list(map(int, input().split()))  \ndp = [0] * n  \ndp[0] = 0  \nfor i in range(1, n):  \n    dp[i] = min(dp[i-1], dp[i-1] + a[i-1] * math.ceil(v[i-1] / d))  \nprint(dp[n-1])",
+        "detail": "模拟考.road",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "kind": 5,
+        "importPath": "模拟考.road",
+        "description": "模拟考.road",
+        "peekOfCode": "dp = [0] * n  \ndp[0] = 0  \nfor i in range(1, n):  \n    dp[i] = min(dp[i-1], dp[i-1] + a[i-1] * math.ceil(v[i-1] / d))  \nprint(dp[n-1])",
+        "detail": "模拟考.road",
+        "documentation": {}
+    },
+    {
+        "label": "dp[0]",
+        "kind": 5,
+        "importPath": "模拟考.road",
+        "description": "模拟考.road",
+        "peekOfCode": "dp[0] = 0  \nfor i in range(1, n):  \n    dp[i] = min(dp[i-1], dp[i-1] + a[i-1] * math.ceil(v[i-1] / d))  \nprint(dp[n-1])",
+        "detail": "模拟考.road",
+        "documentation": {}
+    }
+]
