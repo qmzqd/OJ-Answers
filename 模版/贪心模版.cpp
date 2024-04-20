@@ -12,7 +12,7 @@ int main(){
     cin>>c>>n;  
     for(int i=0;i<n;i++){  
         cin>>a[i].name>>a[i].w;  
-        sort(a,a+n,cmp);//对整数做排序sort(起始位置,结束地址)
+        sort(a,a+n,cmp);
     }
         for(int i=0;i<n;i++){
             if(sum+a[i].w>c)break;
