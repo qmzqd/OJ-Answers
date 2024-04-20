@@ -1,4 +1,4 @@
-#include<Ô­Éñ.h>
+#include<bits/stdc++.h>
 using namespace std;
 int n[114];
 int a;

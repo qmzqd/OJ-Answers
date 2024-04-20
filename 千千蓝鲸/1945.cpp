@@ -4,7 +4,7 @@ int on[114514], prime[114514], n, cnt;
 void init(int n)
 {
     on[0] = on[1] = 1;
-    // 0ºÍ1²»ÊÇËØÊý
+    // 0ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     for (int i = 2; i <= n; ++i)
     {
         if (!on[i])
@@ -12,7 +12,7 @@ void init(int n)
         for (int j = 1; j <= cnt && i * prime[j] <= n; ++j)
         {
             on[i * prime[j]] = 1;
-            // ±ê¼ÇÎª²»ÊÇËØÊý
+            // ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (i % prime[j] == 0)
                 break;
         }

@@ -4,11 +4,12 @@ int n, m, g[15][15], book[15][15];
 int dx[4] = {-1, 1, 0, 0};
 int dy[4] = {0, 0, -1, 1};
 bool f = 1;
-int zhongdian1,zhongdian2;
+int zhongdian1, zhongdian2;
 void dfs(int x, int y)
 {
-    if(y==n&&x==n&&y==m&&x==m){
-        f=0;
+    if (y == n && x == n && y == m && x == m)
+    {
+        f = 0;
         return;
     }
     for (int i = 0; i < 4; i++)

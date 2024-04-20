@@ -1,9 +1,9 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-string front,middle;
+string front, middle;
 int main()
 {
-    cin>>front>>middle;
-    cout<<"CBA";
+    cin >> front >> middle;
+    cout << "CBA";
     return 0;
 }

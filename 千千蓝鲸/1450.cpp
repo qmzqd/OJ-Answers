@@ -1,48 +1,64 @@
-#include <iostream>  
-#include <string>  
-#include <algorithm>  
-  
-bool isPrime(int n) {  
-    if (n <= 1) {  
-        return false;  
-    }  
-    if (n == 2) {  
-        return true;  
-    }  
-    if (n % 2 == 0) {  
-        return false;  
-    }  
-    for (int i = 3; i * i <= n; i += 2) {  
-        if (n % i == 0) {  
-            return false;  
-        }  
-    }  
-    return true;  
-}  
-  
-bool isAbsolutePrime(int n) {  
-    if (n < 1) {  
-        return false; // ÊäÈëÖµ±ØÐë´óÓÚµÈÓÚ1  
-    }  
-    int reversed = 0;  
-    while (n > 0) {  
-        reversed = reversed * 10 + n % 10; // Ê¹ÓÃÎ»²Ù×÷·´×ªÕûÊý  
-        n /= 10;  
-    }  
-    return isPrime(n) && isPrime(reversed); // ¼ì²éÔ­Ê¼ÊýºÍ·´×ªºóµÄÊýÊÇ·ñ¶¼ÊÇÖÊÊý  
-}  
-  
-int main() {  
-    int n;  
-    std::cin >> n;  
-    try {  
-        if (isAbsolutePrime(n)) {  
-            std::cout << "Yes" << std::endl;  
-        } else {  
-            std::cout << "no" << std::endl;  
-        }  
-    } catch (const std::exception& e) {  
-        std::cerr << "·¢ÉúÒì³££º" << e.what() << std::endl;  
-    }  
-    return 0;  
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+bool isPrime(int n)
+{
+    if (n <= 1)
+    {
+        return false;
+    }
+    if (n == 2)
+    {
+        return true;
+    }
+    if (n % 2 == 0)
+    {
+        return false;
+    }
+    for (int i = 3; i * i <= n; i += 2)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool isAbsolutePrime(int n)
+{
+    if (n < 1)
+    {
+        return false; // ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½1
+    }
+    int reversed = 0;
+    while (n > 0)
+    {
+        reversed = reversed * 10 + n % 10; // Ê¹ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
+        n /= 10;
+    }
+    return isPrime(n) && isPrime(reversed); // ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½Í·ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+}
+
+int main()
+{
+    int n;
+    std::cin >> n;
+    try
+    {
+        if (isAbsolutePrime(n))
+        {
+            std::cout << "Yes" << std::endl;
+        }
+        else
+        {
+            std::cout << "no" << std::endl;
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½" << e.what() << std::endl;
+    }
+    return 0;
 }
