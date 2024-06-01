@@ -1,4 +1,4 @@
-#include<Ô­Éñ.h>
+#include<bits/stdc++.h>
 using namespace std;
 int n,a[305],top=0;
 int main(){
