@@ -49,7 +49,7 @@
         "kind": 5,
         "importPath": "千千蓝鲸.9554",
         "description": "千千蓝鲸.9554",
-        "peekOfCode": "stores = []\nfor _ in range(n):\n    a, b = map(int, input().split())\n    stores.append((a, b))\nprint(min_cost(m, stores))",
+        "peekOfCode": "stores = []\nfor _ in range(n):\n    a, b = map(int, input().split())\n    stores.append((a, b))\nprint(min_cost(m, stores))\n#9554",
         "detail": "千千蓝鲸.9554",
         "documentation": {}
     },
