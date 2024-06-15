@@ -36,6 +36,24 @@
         "documentation": {}
     },
     {
+        "label": "min_cost",
+        "kind": 2,
+        "importPath": "千千蓝鲸.9554",
+        "description": "千千蓝鲸.9554",
+        "peekOfCode": "def min_cost(m, stores):\n    stores.sort(key=lambda x: x[0])\n    total_cost = 0 \n    for a, b in stores:\n        to_buy = min(b, m)\n        total_cost += a * to_buy\n        m -= to_buy\n        if m <= 0:\n            break\n    return total_cost",
+        "detail": "千千蓝鲸.9554",
+        "documentation": {}
+    },
+    {
+        "label": "stores",
+        "kind": 5,
+        "importPath": "千千蓝鲸.9554",
+        "description": "千千蓝鲸.9554",
+        "peekOfCode": "stores = []\nfor _ in range(n):\n    a, b = map(int, input().split())\n    stores.append((a, b))\nprint(min_cost(m, stores))",
+        "detail": "千千蓝鲸.9554",
+        "documentation": {}
+    },
+    {
         "label": "v",
         "kind": 5,
         "importPath": "模拟考.road",
