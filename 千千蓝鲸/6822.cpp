@@ -5,13 +5,13 @@ bool vis[20][20];
 int n, m;
 int sx, sy;
 int cnt = 0;
-bool yuanshen(int x, int y)
+bool flag(int x, int y)
 {
     return x >= 0 && x < n && y >= 0 && y < m && dfs_qidong[x][y] == '.';
 }
 void dfs(int x, int y)
 {
-    if (!yuanshen(x, y) || vis[x][y])
+    if (!flag(x, y) || vis[x][y])
         return;
     vis[x][y] = true;
     cnt++;

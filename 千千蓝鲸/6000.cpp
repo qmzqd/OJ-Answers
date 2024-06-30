@@ -1,19 +1,19 @@
 #include <bits/stdc++.h>   
 using namespace std;  
-string yuanshen(string dadaweadwarca){  
+string flag(string in){  
     string password="";  
-    int n=dadaweadwarca.size();  
+    int n=in.size();  
     for (int i=0;i<n/2;i++){  
-        swap(dadaweadwarca[i],dadaweadwarca[n-i-1]);  
+        swap(in[i],in[n-i-1]);  
     }  
     for (int i=0;i<n/2;i++){  
-        password+=dadaweadwarca[i];  
+        password+=in[i];  
     }  
     return password;  
 }  
 int main(){  
-    string dadaweadwarca;  
-    cin>>dadaweadwarca;  
-    cout<<yuanshen(dadaweadwarca);  
+    string in;  
+    cin>>in;  
+    cout<<flag(in);  
     return 0;  
 }
