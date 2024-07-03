@@ -3,13 +3,13 @@ using namespace std;
 int dfs_bianliang[10][10];
 int N;
 bool vis[10][10];
-bool wobuzhidao(int x, int y)
+bool tf(int x, int y)
 {
     return x >= 0 && x < N && y >= 0 && y < N && dfs_bianliang[x][y] != 1;
 }
 bool dfs(int x, int y)
 {
-    if (!wobuzhidao(x, y))
+    if (!tf(x, y))
         return false;
     if (dfs_bianliang[x][y] == 2)
         return true;

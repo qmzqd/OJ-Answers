@@ -1,24 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, sbbee[25];
-int wedardbadawawd(int n)
+int n, m[25];
+int flag(int n)
 {
     if (n <= 2)
     {
         return n;
     }
-    sbbee[1] = 1;
-    sbbee[2] = 2;
+    m[1] = 1;
+    m[2] = 2;
     for (int i = 3; i <= n; i++)
     {
-        sbbee[i] = sbbee[i - 1] + sbbee[i - 2];
+        m[i] = m[i - 1] + m[i - 2];
     }
-    return sbbee[n];
+    return m[n];
 }
 
 int main()
 {
     cin >> n;
-    cout << wedardbadawawd(n) << endl;
+    cout << flag(n) << endl;
     return 0;
 }

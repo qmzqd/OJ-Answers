@@ -4,7 +4,6 @@ int on[114514], prime[114514], n, cnt;
 void init(int n)
 {
     on[0] = on[1] = 1;
-    // 0��1��������
     for (int i = 2; i <= n; ++i)
     {
         if (!on[i])
