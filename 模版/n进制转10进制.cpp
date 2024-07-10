@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int yuanshen;
+int flag;
 int main()
 {
 	int n;
@@ -20,9 +20,9 @@ int main()
 	}
 	for (int i = a - 1; i >= 0; i--)
 	{
-		yuanshen += b[i] * pow(n, k);
+		flag += b[i] * pow(n, k);
 		k++;
 	}
-	cout << yuanshen << endl;
+	cout << flag << endl;
 	return 0;
 }
