@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-
+using namespace std;
 bool isPrime(int n)
 {
     if (n <= 1)
@@ -30,35 +30,35 @@ bool isAbsolutePrime(int n)
 {
     if (n < 1)
     {
-        return false; // ����ֵ������ڵ���1
+        return false; 
     }
     int reversed = 0;
     while (n > 0)
     {
-        reversed = reversed * 10 + n % 10; // ʹ��λ������ת����
+        reversed = reversed * 10 + n % 10; 
         n /= 10;
     }
-    return isPrime(n) && isPrime(reversed); // ���ԭʼ���ͷ�ת������Ƿ�������
+    return isPrime(n) && isPrime(reversed); 
 }
 
 int main()
 {
     int n;
-    std::cin >> n;
+    cin >> n;
     try
     {
         if (isAbsolutePrime(n))
         {
-            std::cout << "Yes" << std::endl;
+            cout << "Yes" << endl;
         }
         else
         {
-            std::cout << "no" << std::endl;
+            cout << "no" << endl;
         }
     }
-    catch (const std::exception &e)
+    catch (const exception &e)
     {
-        std::cerr << "�����쳣��" << e.what() << std::endl;
+        cerr << "�����쳣��" << e.what() << endl;
     }
     return 0;
 }

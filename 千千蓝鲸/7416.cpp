@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long n;
+int a,b;
 int main()
 {
-   cin >> n;
-   cout << std::hex << n;
+   cin>>a>>b;
+   cout<<a+b;
    return 0;
 }

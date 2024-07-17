@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long n;
+int n,m[25];
 int main()
 {
-   cin >> n;
-   cout << std::hex << n;
+cout<<"0";
    return 0;
 }

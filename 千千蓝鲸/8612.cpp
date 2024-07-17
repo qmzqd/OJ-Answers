@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+int n;
 int main()
 {
-    int n;
     cin >> n;
-    cout << (1 << n) - 1 << endl;
+    cout << (n + n % 2) / 2;
     return 0;
-};
+}

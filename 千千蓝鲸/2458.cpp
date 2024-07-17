@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<bits/stdc++.h>
 using namespace std;
 string a,b;
@@ -19,4 +20,15 @@ int main()
     }
     cout<<"yes";
     return 0; 
+=======
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  string s1, s2;
+  getline(cin,s1);
+  getline(cin,s2);
+  
+>>>>>>> 0d7f0c2097292e25d54a766d40f60b4dadaa8b6f
 }
