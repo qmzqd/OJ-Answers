@@ -1,37 +1,21 @@
 #include <bits/stdc++.h>
+#pragma GCC optimize(3)
 using namespace std;
-int main() {
-    int n;
+int n, a[90000], s[90000], m;
+int main()
+{
     cin >> n;
-    vector<int> wallAreas(n);
-    for (int i = 0; i < n; i++) {
-        cin >> wallAreas[i];
-    }
-    int m;
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    for (int i = 0; i < n; i++)
+        s[i] = s[i - 1] + a[i];
     cin >> m;
-    vector<int> queries(m);
-    for (int i = 0; i < m; i++) {
-        cin >> queries[i];
+    while (m--)
+    {
+        int x;
+        cin >> x;
+        cout << s[x - 1];
+        if (m >= 1)
+            cout << ",";
     }
-    vector<int> prefixSum(n);
-    prefixSum[0] = wallAreas[0];
-    for (int i = 1; i < n; i++) {
-        prefixSum[i] = prefixSum[i - 1] + wallAreas[i];
-    }
-
-    for (int i = 0; i < m; i++) {
-        int queryIndex = queries[i] - 1;
-
-        if (queryIndex == 0) {
-            cout << prefixSum[0];
-        } else {
-            cout << "," << prefixSum[queryIndex];
-        }
-
-        if (i == m - 1) {
-            cout << endl;
-        }
-    }
-
-    return 0;
 }

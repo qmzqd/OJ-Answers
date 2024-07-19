@@ -1,8 +1,9 @@
 #include <iostream>
+#pragma GCC optimize(3)
 using namespace std;
+int n, m;
 int main()
 {
-    int n, m;
     cin >> n >> m;
     int book[n];
     for (int i = 0; i < n; i++)
@@ -19,8 +20,6 @@ int main()
         }
         ms = max(ms, sum);
     }
-
     cout << ms << endl;
-
     return 0;
 }
