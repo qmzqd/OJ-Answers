@@ -1,8 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define _for(i,a,b) for(int i=a;i<=b;i++)
+int q[10], a, b, c;
 int main()
 {
-   
-   return 0;
+    for (int i = 0; i < 7; i++)
+        cin >> q[i];
+    sort(q, q + 7);
+    a = q[0], b = q[1], c = q[6] - a - b;
+    cout << a << " " << b << " " << c;
+    return 0;
 }
