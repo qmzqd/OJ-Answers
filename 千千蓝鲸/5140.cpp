@@ -8,6 +8,7 @@ struct stu
 } a[1005];
 bool cmp(stu x, stu y)
 {
+	if (x.t == y.t) return x.id < y.id; 
 	return x.t < y.t;
 }
 int main()

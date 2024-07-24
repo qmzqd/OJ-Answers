@@ -96,7 +96,7 @@ int* tong(int *arr, int n) {
 
 - 通过重复遍历要排序的数列，比较并交换相邻元素以实现排序。
 
-```c
+```c++
 void maopao(int a[], int n) {
     int i, j, temp;
     for (i = 0; i < n - 1; i++) {
@@ -115,7 +115,7 @@ void maopao(int a[], int n) {
 
 - 通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
 
-```c
+```c++
 void charu(int arr[], int n) {
     int i, key, j;
     for (i = 1; i < n; i++) {
@@ -173,6 +173,7 @@ void charu(int arr[], int n) {
 
 - length()：返回字符串的长度。
 - \_\_gcd()：计算两个数的最大公约数。
+- stio(<string>): 去字符串的前导零
 
 # 错误代码
 

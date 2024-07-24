@@ -1,19 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int flag(int n) {
-    vector<int> dp(n + 1, 0);
-    dp[0] = 1;
-    for (int i = 1; i <= n; i++) {
-        for (int j = n; j >= i; j--) {
-            dp[j] = (dp[j] + dp[j - i]) % 998244353;
-        }
-    }
-    return dp[n];
-}
-int main() {
-    int n;
+#define _for(i, a, b) for (int i = a; i <= b; i++)
+int n, a[1005] = {0, 1, 2};
+int main()
+{
     cin >> n;
-    int out = flag(n);
-    cout << out << endl;
+    _for(i, 3, n)
+    {
+        if (i % 2)
+            a[i] = a[i - 1];
+        else
+            a[i] = a[i - 1] + a[i / 2];
+    }
+    cout << a[n];
     return 0;
 }

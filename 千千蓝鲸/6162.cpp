@@ -4,7 +4,7 @@ int n, m, ans;
 struct niunai
 {
     int a, b;
-} a[1145];
+} a[11451];
 bool cmp(niunai a, niunai b)
 {
     if (a.a != b.a)
