@@ -27,11 +27,11 @@ int main()
         cin >> n;
         for (int i = 0; i < n; ++i)
             scanf("%s", book[i]);
-        cin>>ha>>la>>hb>>lb;
+        cin >> ha >> la >> hb >> lb;
         memset(dawd, false, sizeof(dawd));
         if (book[ha - 1][la - 1] == '#')
         {
-            cout<<"NO"<<endl;
+            cout << "NO" << endl;
             continue;
         }
         bool flag = dfs(ha - 1, la - 1);

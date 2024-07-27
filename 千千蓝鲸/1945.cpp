@@ -11,7 +11,6 @@ void init(int n)
         for (int j = 1; j <= cnt && i * prime[j] <= n; ++j)
         {
             on[i * prime[j]] = 1;
-            // ���Ϊ��������
             if (i % prime[j] == 0)
                 break;
         }
