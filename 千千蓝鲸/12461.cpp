@@ -1,27 +1,29 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int t[1145];
-int ms(const vector<int>&a) {
-    int m = INT_MIN, flag = 0;
-    for (int i = 0; i < a.size(); i++) {
+int maxx(int a[], int size)
+{
+    int ms = -2147483648, flag = 0;
+    for (int i = 0; i < size; i++)
+    {
         flag = flag + a[i];
-        if (m < flag)
-            m = flag;
-
+        if (ms < flag)
+            ms = flag;
         if (flag < 0)
             flag = 0;
     }
-    return m;
+    return ms;
 }
 
-int main() {
+int main()
+{
     int n;
     cin >> n;
-    for (int i = 0; i < n; ++i) {
+    int t[n];
+    for (int i = 0; i < n; ++i)
+    {
         cin >> t[i];
     }
-
-    int maxSum = ms(t);
-    cout << maxSum << endl;
+    int out = maxx(t, n);
+    cout << out << endl;
     return 0;
 }
