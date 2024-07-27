@@ -174,6 +174,7 @@ void charu(int arr[], int n) {
 - length()：返回字符串的长度。
 - \_\_gcd()：计算两个数的最大公约数。
 - stio(<string>): 去字符串的前导零
+- lower_bound()：二分查找
 
 # 错误代码
 
