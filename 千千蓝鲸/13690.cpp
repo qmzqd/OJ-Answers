@@ -25,8 +25,8 @@ ebcbeae
 using namespace std;
 int flag(string s, int left, int right)
 {
-    int l = left, r = right;
-    while (l >= 0 && r < s.length() && s[l] == s[r])
+    long long l = left, r = right;
+    while (l >= 0 && r <= s.length() && s[l] == s[r])
     {
         l--;
         r++;
@@ -36,14 +36,12 @@ int flag(string s, int left, int right)
 int main()
 {
     string s;
-    int k;
+    long long k;
     cin >> s >> k;
-    int maxl = 0;
+    long long maxl = 0;
     for (int i = 0; i < s.length(); i++)
     {
-        int len1 = flag(s, i, i);
-        int len2 = flag(s, i, i + 1);
-        int len = max(len1, len2);
+        int len = max(flag(s, i, i), flag(s, i, i + 1));
         if (len >= k && len > maxl)
             maxl = len;
     }
