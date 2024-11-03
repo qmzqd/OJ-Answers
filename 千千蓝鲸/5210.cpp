@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-int a, b;
+#define _for(i,a,b) for(int i=a;i<=b;i++)
 int main()
 {
-   cin >> a >> b;
-   cout << a + b;
+   
    return 0;
 }
