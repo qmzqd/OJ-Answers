@@ -15,23 +15,19 @@ int main()
     }
     int ms = 0;
     bool p = false;
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (book[i][j] == 0)
-            {
-                int score = 0;
-                for (int k = 0; k < n; k++)
-                {
-                    score += book[i][k];
-                }
-                for (int k = 0; k < n; k++)
-                {
-                    score += book[k][j];
-                }
-                score -= book[i][j];
+    int row_sum[1005] = {0}, col_sum[1005] = {0};
+    // 预计算每行和每列的和
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            row_sum[i] += book[i][j];
+            col_sum[j] += book[i][j];
+        }
+    }
+    // 遍历每个0元素计算得分
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (book[i][j] == 0) {
+                int score = row_sum[i] + col_sum[j];
                 ms = max(ms, score);
                 p = true;
             }

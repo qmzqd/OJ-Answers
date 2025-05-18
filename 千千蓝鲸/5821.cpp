@@ -6,20 +6,16 @@ int main()
     int n, m;
     cin >> n >> m;
     vector<int> nums(n);
-    for (int i = 0; i < n; i++)
-    {
+    vector<int> prefix(n + 1, 0);  // 前缀和数组，prefix[0]=0
+    for (int i = 0; i < n; i++){
         cin >> nums[i];
+        prefix[i + 1] = prefix[i] + nums[i];
     }
-    while (m--)
-    {
+    while (m--){
         int l, r;
         cin >> l >> r;
-        int sum = 0;
-        for (int i = l - 1; i < r; i++)
-        {
-            sum += nums[i];
-        }
-        cout << sum << endl;
+        // 区间和为prefix[r] - prefix[l-1]
+        cout << prefix[r] - prefix[l - 1] << endl;
     }
     return 0;
 }
